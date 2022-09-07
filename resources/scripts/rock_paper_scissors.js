@@ -36,10 +36,10 @@ class RockPaperScissors {
   determineWinner(userSelection, cpuSelection){
     const acceptedResults = [ `win`, `lose`, `tie` ];
     let result;
-    if (userSelection === cpuSelection)
-      result = acceptedResults[2];
     
-    if (userSelection == 'rock' && cpuSelection == 'scissors') {
+    if (userSelection === cpuSelection) {
+      result = acceptedResults[2];
+    } else if (userSelection == 'rock' && cpuSelection == 'scissors') {
       result = acceptedResults[0];
     } else if (userSelection == 'paper' && cpuSelection == 'rock') {
       result = acceptedResults[0];
