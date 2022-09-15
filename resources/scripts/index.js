@@ -1,22 +1,10 @@
-// Forms
-const inputForm = document.getElementById("name-form");
-const rpsForm = document.getElementById("game-form");
-
-inputForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-});
-
-rpsForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-});
-
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById('game-screen');
 const startGameButton = document.getElementById('start-game-button');
 const userName = document.getElementById('username');
 const userSelection = document.getElementById('user-selection');
-const goButton = document.getElementById('go=button');
+const goButton = document.getElementById('go-button');
 const scoreParagraph = document.getElementById('score');
 const gameHistoryParagraph = document.getElementById('game-history');
 
