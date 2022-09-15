@@ -9,7 +9,7 @@ const scoreParagraph = document.getElementById('score');
 const gameHistoryParagraph = document.getElementById('game-history');
 
 // instantiate the game object from the `RockPaperScissors` class.
-let game = new RockPaperScissors(userName);
+let game;
 
 // hide game screen
 gameScreen.classList.add(`d-none`);
