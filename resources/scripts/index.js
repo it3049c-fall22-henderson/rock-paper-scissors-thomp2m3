@@ -1,3 +1,15 @@
+// Forms
+const inputForm = document.getElementById("name-form");
+const rpsForm = document.getElementById("game-form");
+
+inputForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+});
+
+rpsForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+});
+
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById('game-screen');
@@ -27,7 +39,7 @@ function updateGameHistoryUI(){
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
   const username = userName;
-  game = new RockPaperScissors(userName);
+  game = new RockPaperScissors(username);
   // Complete
   welcomeScreen.classList.add('d-none');
   gameScreen.classList.remove('d-none');
