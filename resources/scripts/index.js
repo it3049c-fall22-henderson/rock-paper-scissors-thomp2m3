@@ -25,7 +25,8 @@ function updateGameHistoryUI(){
 }
 
 // start-game-button EventListener
-startGameButton.addEventListener(`click`, function () {
+startGameButton.addEventListener(`click`, function (e) {
+  e.preventDefault();
   const username = userName;
   game = new RockPaperScissors(username);
   // Complete
@@ -34,8 +35,10 @@ startGameButton.addEventListener(`click`, function () {
 });
 
 // go-button EventListener
-goButton.addEventListener(`click`, function () {
-  game.play(userSelection);
+goButton.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  const userChoice = userSelection.options.value;
+  game.play(userChoice);
   scoreParagraph = updateScoreTallyUI();
   gameHistoryParagraph = updateGameHistoryUI();
 });
