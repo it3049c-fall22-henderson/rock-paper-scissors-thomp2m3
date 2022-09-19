@@ -37,8 +37,7 @@ startGameButton.addEventListener(`click`, function (e) {
 // go-button EventListener
 goButton.addEventListener(`click`, function (e) {
   e.preventDefault();
-  const userChoice = userSelection.options.value;
-  game.play(userChoice);
+  game.play(userSelection);
   scoreParagraph = updateScoreTallyUI();
   gameHistoryParagraph = updateGameHistoryUI();
 });
